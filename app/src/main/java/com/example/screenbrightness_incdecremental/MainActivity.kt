@@ -33,6 +33,9 @@ class MainActivity : AppCompatActivity() {
                 if(brightnessValue >= 11) {
                     brightnessValue -= 10
                     changeScreenBrightness(context, brightnessValue)
+                    
+                    val k = brightnessValue.toDouble()/255
+                    Toast.makeText(applicationContext,"Brightness : ${round(k*100)}%", Toast.LENGTH_SHORT).show()
                 }
             }
         }
@@ -54,6 +57,9 @@ class MainActivity : AppCompatActivity() {
                 if (brightnessValue <= 245) {
                     brightnessValue += 10
                     changeScreenBrightness(context, brightnessValue)
+                    
+                    val k = brightnessValue.toDouble()/255
+                    Toast.makeText(applicationContext,"Brightness : ${round(k*100)}%", Toast.LENGTH_SHORT).show()
                 }
             }
         }
